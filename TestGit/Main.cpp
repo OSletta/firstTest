@@ -1,4 +1,3 @@
-#include<iostream>
 #include"Vect2D.h"
 
 

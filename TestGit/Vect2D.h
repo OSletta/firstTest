@@ -3,10 +3,11 @@
 
 class Vect2D
 {
-
-public:
+private:
     int x;
     int y;
+public:
+    
 
    
     Vect2D(int x = 0, int y = 0);
@@ -16,5 +17,8 @@ public:
     void printVect2d();
     void setVect2D(int x, int y);
     ~Vect2D();
+
+ 
 };
+
 
