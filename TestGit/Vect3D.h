@@ -25,6 +25,8 @@ namespace oss
         }
 
         friend Vect3D operator+(const Vect3D &left, const Vect3D &right);
+        friend Vect3D operator-(const Vect3D &left, const Vect3D &right);
+        friend int operator*(const Vect3D &left, const Vect3D &right);
         friend std::ostream &operator<<(std::ostream &out, const Vect3D &right);
 
     };
@@ -34,6 +36,23 @@ namespace oss
         result.x = left.x + right.x;
         result.y = left.y + right.y;
         result.z = left.z + right.z;
+        return result;
+    }
+
+    Vect3D operator-(const Vect3D & left, const Vect3D & right)
+    {
+        Vect3D result;
+        result.x = left.x - right.x;
+        result.y = left.y - right.y;
+        result.z = left.z - right.z;
+        return result;
+    }
+
+    int operator*(const Vect3D & left, const Vect3D & right)
+    {
+        int result;
+        result = (left.x*right.x)+ (left.y*right.y)+ (left.z*right.z);
+        
         return result;
     }
 
